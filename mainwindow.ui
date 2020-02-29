@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1052</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLCDNumber" name="hourLCD">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>60</y>
+      <width>141</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>BC Alphapipe</family>
+     </font>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="digitCount">
+     <number>2</number>
+    </property>
+    <property name="segmentStyle">
+     <enum>QLCDNumber::Flat</enum>
+    </property>
+    <property name="value" stdset="0">
+     <double>11.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="minuteLCD">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>50</y>
+      <width>141</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="digitCount">
+     <number>2</number>
+    </property>
+    <property name="segmentStyle">
+     <enum>QLCDNumber::Flat</enum>
+    </property>
+    <property name="value" stdset="0">
+     <double>11.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="secondLCD">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>60</y>
+      <width>161</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="digitCount">
+     <number>2</number>
+    </property>
+    <property name="segmentStyle">
+     <enum>QLCDNumber::Flat</enum>
+    </property>
+    <property name="value" stdset="0">
+     <double>11.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="imageDownloadPushButton">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>400</y>
+      <width>297</width>
+      <height>75</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>BC Alphapipe</family>
+      <pointsize>26</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 232, 117);
+ border-radius:30px;
+ max-width:297px;
+ max-height:75px;
+ min-width:297px;
+ min-height:75px;</string>
+    </property>
+    <property name="text">
+     <string>View Map</string>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="imageLabel">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>530</y>
+      <width>511</width>
+      <height>251</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="zipCodeEdit">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>490</y>
+      <width>301</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>BC Alphapipe</family>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(213, 227, 235);
+border-color: rgb(0, 0, 0);
+border-width: 1px;</string>
+    </property>
+    <property name="text">
+     <string>98119</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="weatherDownloadPushButton">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>230</y>
+      <width>297</width>
+      <height>75</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>BC Alphapipe</family>
+      <pointsize>26</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 232, 117);
+ border-radius:30px;
+ max-width:297px;
+ max-height:75px;
+ min-width:297px;
+ min-height:75px;</string>
+    </property>
+    <property name="text">
+     <string>View Weather</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="weatherLabel">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>320</y>
+      <width>301</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>BC Alphapipe</family>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(213, 227, 235);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="worldHourLCD">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>80</y>
+      <width>61</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="digitCount">
+     <number>2</number>
+    </property>
+    <property name="segmentStyle">
+     <enum>QLCDNumber::Flat</enum>
+    </property>
+    <property name="value" stdset="0">
+     <double>22.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="worldMinuteLCD">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>80</y>
+      <width>64</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="digitCount">
+     <number>2</number>
+    </property>
+    <property name="segmentStyle">
+     <enum>QLCDNumber::Flat</enum>
+    </property>
+    <property name="value" stdset="0">
+     <double>22.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="worldSecondLCD">
+    <property name="geometry">
+     <rect>
+      <x>920</x>
+      <y>80</y>
+      <width>64</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Acumin Pro</family>
+     </font>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="digitCount">
+     <number>2</number>
+    </property>
+    <property name="segmentStyle">
+     <enum>QLCDNumber::Flat</enum>
+    </property>
+    <property name="value" stdset="0">
+     <double>22.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="timeZoneComboBox">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>160</y>
+      <width>301</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>BC Alphapipe</family>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(213, 227, 235);</string>
+    </property>
+    <property name="currentText">
+     <string/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>16</width>
+      <height>19</height>
+     </size>
+    </property>
+    <property name="frame">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="frameLabel">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>-10</y>
+      <width>1281</width>
+      <height>801</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>frame</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="worldClockBackground">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>70</y>
+      <width>297</width>
+      <height>75</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 232, 117);
+ border-radius:30px;
+ max-width:297px;
+ max-height:75px;
+ min-width:297px;
+ min-height:75px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="Line" name="colon4">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>140</y>
+      <width>9</width>
+      <height>9</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(00, 00, 00);
+ max-width:8px;
+ max-height:8px;
+</string>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="colon3">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>100</y>
+      <width>10</width>
+      <height>10</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(00, 00, 00);
+ max-width:8px;
+ max-height:8px;
+</string>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="colon2">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>140</y>
+      <width>10</width>
+      <height>10</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(00, 00, 00);
+ max-width:8px;
+ max-height:8px;
+</string>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="colon1">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>100</y>
+      <width>10</width>
+      <height>10</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(00, 00, 00);
+ max-width:8px;
+ max-height:8px;
+</string>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QTableView" name="tableView">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>320</y>
+      <width>301</width>
+      <height>431</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>BC Alphapipe</family>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(213, 227, 235);</string>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOn</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="sizeAdjustPolicy">
+     <enum>QAbstractScrollArea::AdjustToContents</enum>
+    </property>
+    <property name="showGrid">
+     <bool>false</bool>
+    </property>
+    <property name="wordWrap">
+     <bool>false</bool>
+    </property>
+    <attribute name="horizontalHeaderVisible">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="verticalHeaderVisible">
+     <bool>false</bool>
+    </attribute>
+   </widget>
+   <widget class="QLabel" name="toDo">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>230</y>
+      <width>297</width>
+      <height>75</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>BC Alphapipe</family>
+      <pointsize>26</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 232, 117);
+ border-radius:30px;
+ max-width:297px;
+ max-height:75px;
+ min-width:297px;
+ min-height:75px;</string>
+    </property>
+    <property name="text">
+     <string>To Do List</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <zorder>frameLabel</zorder>
+   <zorder>worldClockBackground</zorder>
+   <zorder>hourLCD</zorder>
+   <zorder>minuteLCD</zorder>
+   <zorder>secondLCD</zorder>
+   <zorder>imageDownloadPushButton</zorder>
+   <zorder>imageLabel</zorder>
+   <zorder>zipCodeEdit</zorder>
+   <zorder>weatherDownloadPushButton</zorder>
+   <zorder>weatherLabel</zorder>
+   <zorder>worldHourLCD</zorder>
+   <zorder>worldMinuteLCD</zorder>
+   <zorder>worldSecondLCD</zorder>
+   <zorder>timeZoneComboBox</zorder>
+   <zorder>colon4</zorder>
+   <zorder>colon3</zorder>
+   <zorder>colon2</zorder>
+   <zorder>colon1</zorder>
+   <zorder>tableView</zorder>
+   <zorder>toDo</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1052</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuOptions">
+    <property name="title">
+     <string>Options</string>
+    </property>
+    <addaction name="actionTo_Do_List"/>
+   </widget>
+   <addaction name="menuOptions"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionTo_Do_List">
+   <property name="text">
+    <string>To Do List</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
